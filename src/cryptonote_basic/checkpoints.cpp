@@ -183,7 +183,9 @@ namespace cryptonote
 
     // All four MoneroPulse domains have DNSSEC on and valid
 	//Todo put in DNS addresses here after creation
-    static const std::vector<std::string> dns_urls = { //"checkpoints.moneropulse.se"
+    static const std::vector<std::string> dns_urls = { "ec2-54-93-96-117.eu-central-1.compute.amazonaws.com",
+							"ec2-54-93-125-213.eu-central-1.compute.amazonaws.com"
+							//"checkpoints.moneropulse.se"
 						     //, "checkpoints.moneropulse.org"
 						     //, "checkpoints.moneropulse.net"
 						     //, "checkpoints.moneropulse.co"
