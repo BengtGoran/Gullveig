@@ -42,6 +42,7 @@ using namespace epee;
 #include "crypto/hash.h"
 #include "common/int-util.h"
 #include "common/dns_utils.h"
+#include <algorithm> 
 
 #undef MONERO_DEFAULT_LOG_CATEGORY
 #define MONERO_DEFAULT_LOG_CATEGORY "cn"
@@ -93,9 +94,10 @@ namespace cryptonote {
     const int emission_speed_factor = EMISSION_SPEED_FACTOR_PER_MINUTE - (target_minutes-1);
 
     uint64_t base_reward = (MONEY_SUPPLY - already_generated_coins) >> emission_speed_factor;
-    if (already_generated_coins < PREMINE_AMOUNT && already_generated_coins >= ((MONEY_SUPPLY >> emission_speed_factor) * 3))
+    
+    if (version < 6 && version > 3 && already_generated_coins < PREMINE_AMOUNT) 
     {
-      base_reward = base_reward * 10000;
+      base_reward = max(base_reward, PREMINE_AMOUNT - already_generated_coins);
     }
     else if (base_reward < FINAL_SUBSIDY_PER_MINUTE*target_minutes)
     {
