@@ -120,10 +120,10 @@ ge_comments = textwrap.dedent("""\
     */
     """)
 
-xmr_comments = textwrap.dedent("""\
+gul_comments = textwrap.dedent("""\
     /*
      *
-     * xmr specific code
+     * gul specific code
      *
      *
     This code is from the original CryptoNote.
@@ -171,7 +171,7 @@ if a == "m":
         os.system("cp "+g+" "+g.replace("fe", "fe.monero."))
     qhasmToC("fe_pow22523.c", "pow22523.h", "fe.monero._pow22523.c")
     qhasmToC("fe_invert.c", "pow225521.h", "fe.monero._invert.c")
-    os.system("rm fe.monero._isnonzero.c") #since it's modified, it's in xmrSpecificOld
+    os.system("rm fe.monero._isnonzero.c") #since it's modified, it's in gulSpecificOld
     os.system("cat fe.monero.*.c | grep -v '^#include' > fe.monero.c")
 
     #sc things
@@ -180,7 +180,7 @@ if a == "m":
     #so you don't get multiple "loads"
     os.system("tail -n +24 sc_reduce.c > sc.monero._reduce.c") #also good on linux
     os.system("tail -n +24 sc_muladd.c > sc.monero._muladd.c")
-    os.system("tail -n +31 sc_sub.xmr.c > sc.monero._sub.xmr.c") #careful with the tails if you change these files!
+    os.system("tail -n +31 sc_sub.gul.c > sc.monero._sub.gul.c") #careful with the tails if you change these files!
     os.system("cat sc.monero.*.c | grep -v '^#include' > sc.monero.c")
 
     #ge stuff
@@ -223,9 +223,9 @@ if a == "m":
             text_file.write(ge_comments)
     with open("sc.monero.comments", "w") as text_file:
             text_file.write(sc_comments)
-    with open("xmr.monero.comments", "w") as text_file:
-            text_file.write(xmr_comments)
-    with open("xmr.monero.predeclarations", "w") as text_file:
+    with open("gul.monero.comments", "w") as text_file:
+            text_file.write(gul_comments)
+    with open("gul.monero.predeclarations", "w") as text_file:
             text_file.write(predeclarations)
 
 
@@ -238,7 +238,7 @@ if a == "m":
         text_file.write(crypto_ops_includes)
 
     #note you may have duplicates of load_3, load_4 and possibly some other functions ... 
-    os.system("cat monero.license crypto-ops.monero.includes xmr.monero.predeclarations fe.monero.comments fe.monero.c sc.monero.comments sc.monero.c ge.monero.comments ge.monero.c xmr.monero.comments xmrSpecificOld.c > crypto-ops.c")
+    os.system("cat monero.license crypto-ops.monero.includes gul.monero.predeclarations fe.monero.comments fe.monero.c sc.monero.comments sc.monero.c ge.monero.comments ge.monero.c gul.monero.comments gulSpecificOld.c > crypto-ops.c")
 
     #monero specific header files
     #print("making crypto-ops-tmp.h")
