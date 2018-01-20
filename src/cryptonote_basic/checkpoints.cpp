@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2018, The Gullveig Project. Partial Copyright (c) 2014-2017 The Monero Project
 //
 // All rights reserved.
 //
@@ -39,8 +39,8 @@ using namespace epee;
 #include <sstream>
 #include <random>
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "checkpoints"
+#undef GULLVEIG_DEFAULT_LOG_CATEGORY
+#define GULLVEIG_DEFAULT_LOG_CATEGORY "checkpoints"
 
 namespace cryptonote
 {
@@ -181,20 +181,20 @@ namespace cryptonote
   {
     std::vector<std::string> records;
 
-    // All four MoneroPulse domains have DNSSEC on and valid
+    // All four GullveigPulse domains have DNSSEC on and valid
 	//Todo put in DNS addresses here after creation
     static const std::vector<std::string> dns_urls = { "ec2-54-93-96-117.eu-central-1.compute.amazonaws.com",
 							"ec2-54-93-125-213.eu-central-1.compute.amazonaws.com"
-							//"checkpoints.moneropulse.se"
-						     //, "checkpoints.moneropulse.org"
-						     //, "checkpoints.moneropulse.net"
-						     //, "checkpoints.moneropulse.co"
+							//"checkpoints.gullveigpulse.se"
+						     //, "checkpoints.gullveigpulse.org"
+						     //, "checkpoints.gullveigpulse.net"
+						     //, "checkpoints.gullveigpulse.co"
     };
 
-    static const std::vector<std::string> testnet_dns_urls = { //"testpoints.moneropulse.se"
-							     //, "testpoints.moneropulse.org"
-							     //, "testpoints.moneropulse.net"
-							     //, "testpoints.moneropulse.co"
+    static const std::vector<std::string> testnet_dns_urls = { //"testpoints.gullveigpulse.se"
+							     //, "testpoints.gullveigpulse.org"
+							     //, "testpoints.gullveigpulse.net"
+							     //, "testpoints.gullveigpulse.co"
     };
 
     if (!tools::dns_utils::load_txt_records_from_dns(records, testnet ? testnet_dns_urls : dns_urls))

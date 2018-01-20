@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2018, The Gullveig Project. Partial Copyright (c) 2014-2017 The Monero Project
 //
 // All rights reserved.
 //
@@ -44,8 +44,8 @@ using namespace epee;
 #include "common/dns_utils.h"
 #include <algorithm> 
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "cn"
+#undef GULLVEIG_DEFAULT_LOG_CATEGORY
+#define GULLVEIG_DEFAULT_LOG_CATEGORY "cn"
 
 namespace cryptonote {
 

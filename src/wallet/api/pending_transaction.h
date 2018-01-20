@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2018, The Gullveig Project. Partial Copyright (c) 2014-2017 The Monero Project
 //
 // All rights reserved.
 //
@@ -35,7 +35,7 @@
 #include <vector>
 
 
-namespace Monero {
+namespace Gullveig {
 
 class WalletImpl;
 class PendingTransactionImpl : public PendingTransaction
@@ -65,4 +65,4 @@ private:
 
 }
 
-namespace Bitmonero = Monero;
+namespace Bitgullveig = Gullveig;

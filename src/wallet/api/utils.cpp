@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2018, The Gullveig Project. Partial Copyright (c) 2014-2017 The Monero Project
 //
 // All rights reserved.
 //
@@ -35,7 +35,7 @@
 
 using namespace std;
 
-namespace Monero {
+namespace Gullveig {
 namespace Utils {
 
 bool isAddressLocal(const std::string &address)
@@ -53,4 +53,4 @@ bool isAddressLocal(const std::string &address)
 
 } // namespace
 
-namespace Bitmonero = Monero;
+namespace Bitgullveig = Gullveig;

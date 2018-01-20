@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2018, The Gullveig Project. Partial Copyright (c) 2014-2017 The Monero Project
 //
 // All rights reserved.
 //
@@ -133,10 +133,10 @@ namespace nodetool
     const std::vector<std::string> m_seed_nodes_list =
     { 	"54.93.96.117",
 	"54.93.125.213"
-//"seeds.moneroseeds.se"
-    //, "seeds.moneroseeds.ae.org"
-    //, "seeds.moneroseeds.ch"
-    //, "seeds.moneroseeds.li"
+//"seeds.gullveigseeds.se"
+    //, "seeds.gullveigseeds.ae.org"
+    //, "seeds.gullveigseeds.ch"
+    //, "seeds.gullveigseeds.li"
     };
 
     bool islimitup=false;
