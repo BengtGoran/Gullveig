@@ -66,7 +66,8 @@ I tried to leave them unchanged by the tools out of respect, but I make no claim
 are updated or correct. I have no intension of keeping copyright information updated in houndreds of places.
 
 Copyright (c) 2018, The Gullveig Project.
-Hands of
+Portions Copyright (c) 2014-2017, The Monero Project
+Portions Copyright (c) 2012-2013 Cryptonote
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
